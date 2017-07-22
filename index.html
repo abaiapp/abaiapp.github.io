@@ -52,10 +52,14 @@
     * as the event label. Setting the transport method to 'beacon' lets the hit be sent
     * using 'navigator.sendBeacon' in browser that support it.
     */
-    var trackOutboundLink = function(url) {
-       ga('send', 'event', 'outbound', 'click', url, {
-         'transport': 'beacon',
-         'hitCallback': function(){document.location = url;}
+    var trackOutboundLink = function(url, val) {
+       ga('send', 'event', {
+        eventCategory: 'outbound',
+        eventAction: 'click',
+        eventLabel: url,
+        eventValue: val,
+        transport: 'beacon',
+        hitCallback: function(){document.location = url;}
        });
     }
     </script>
@@ -130,8 +134,8 @@
                     <h2 class="section-heading">Робот Абай Қара Сөздерін тұтқынға алды. Оны құтқарыңыз!</h2>
                     <p>Біздің бағдарлама Android және iOS платформалаында бар!</p>
                     <div class="badges">
-                        <a class="badge-link" href="https://play.google.com/store/apps/details?id=serekov.abzal.abai" onclick="trackOutboundLink('https://play.google.com/store/apps/details?id=serekov.abzal.abai'); return false;"  target="_blank" ><img src="img/google-play-badge.svg" alt=""></a>
-                        <a class="badge-link" href="#" onclick="trackOutboundLink('#'); return false;"  target="_blank"><img src="img/app-store-badge.svg" alt=""></a>
+                        <a class="badge-link" href="https://play.google.com/store/apps/details?id=serekov.abzal.abai" onclick="trackOutboundLink('https://play.google.com/store/apps/details?id=serekov.abzal.abai', 0); return false;"  target="_blank" ><img src="img/google-play-badge.svg" alt=""></a>
+                        <a class="badge-link" href="#" onclick="trackOutboundLink('#', 1); return false;"  target="_blank"><img src="img/app-store-badge.svg" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -219,7 +223,7 @@
             <h2>Сіздің пікіріңізді <i class="fa fa-heart"></i> білгіміз келеді!</h2>
             <ul class="list-inline list-social">
                 <li class="social-facebook">
-                    <a href="https://www.facebook.com/raihassen/" onclick="trackOutboundLink('https://www.facebook.com/raihassen/'); return false;" target="_blank" ><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/raihassen/" onclick="trackOutboundLink('https://www.facebook.com/raihassen/', 2); return false;" target="_blank" ><i class="fa fa-facebook"></i></a>
                 </li>
                 <li class="social-twitter">
                     <a href="mailto:abaiapp.kz@gmail.com"><i class="fa fa-comments"></i></a>
