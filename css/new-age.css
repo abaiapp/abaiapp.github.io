@@ -146,6 +146,11 @@ p {
     color: #fdcc52;
   }
 }
+
+.never-used-class {
+    background: url("../img/ABAIvsAI.png"), #7b4397;
+}
+
 header {
   position: relative;
   width: 100%;
