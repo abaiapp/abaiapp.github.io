@@ -150,6 +150,9 @@ p {
 .never-used-class {
     background: url("../img/ABAIvsAI.png"), #7b4397;
 }
+.second-never-used-class {
+    background: url("../img/ABAIvsAI.jpg"), #7b4397;
+}
 
 header {
   position: relative;
